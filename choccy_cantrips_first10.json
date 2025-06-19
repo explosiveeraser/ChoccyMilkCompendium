@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "sources": [
+      {
+        "json": "CMC_HB",
+        "abbreviation": "CMC_HB",
+        "full": "Choccy-Milk Compendium Homebrew",
+        "authors": ["ACA"],
+        "url": ""
+      }
+    ],
+    "dateAdded": 1737052800,
+    "dateLastModified": 1737052800
+  },
+
+  "spell": [
+    {
+      "name": "Sweet Talk",
+      "level": 0,
+      "school": "E",
+      "time": [{"number": 1, "unit": "action"}],
+      "range": {"type": "point", "distance": {"type": "feet", "amount": 30}},
+      "components": {"v": true, "s": true, "m": "a pinch of sugar (consumed)"},
+      "duration": [{"type": "instant"}],
+      "entries": [
+        "You coat your words in syrupy sincerity. One creature that can hear and understand you gains <b>advantage</b> on the next Charisma (Persuasion or Deception) check you make against it within 1 minute, provided your request is not overtly harmful. The spell automatically fails against creatures that are actively hostile toward you or that do not share a language with you."
+      ],
+      "source": "CMC_HB",
+      "page": 0
+    },
+    {
+      "name": "Cocoa Compass",
+      "level": 0,
+      "school": "D",
+      "time": [{"number": 1, "unit": "minute"}],
+      "range": {"type": "self"},
+      "components": {"v": true, "s": true, "m": "a chunk of dark chocolate (not consumed)"},
+      "duration": [{"type": "timed", "duration": {"type": "minute", "amount": 10}, "concentration": true}],
+      "entries": [
+        "A tiny silver spoon orbits your rim, always pointing toward the nearest source of edible chocolate within 1 mile. The detection radius increases to 3 miles at 11th level and 5 miles at 17th level.",
+        "While the spell persists, you have <b>advantage</b> on Wisdom (Survival) checks made to locate food or potable water."
+      ],
+      "source": "CMC_HB",
+      "page": 0
+    },
+    {
+      "name": "Melting Point",
+      "level": 0,
+      "school": "T",
+      "time": [{"number": 1, "unit": "action"}],
+      "range": {"type": "point", "distance": {"type": "feet", "amount": 30}},
+      "components": {"v": true, "s": true},
+      "duration": [{"type": "timed", "duration": {"type": "minute", "amount": 1}}],
+      "entries": [
+        "Choose a non-living object you can see that is no larger than a 1-foot cube and is not being worn or carried (size increases at higher levels). The item glows cherry-red.",
+        "A creature touching the object must make a Constitution saving throw. On a failed save, the creature takes {@damage 1d6} fire damage and must drop the item. On a success, it takes no damage but has <i>disadvantage</i> on its next ability check involving the object.",
+        {"type":"table","caption":"Scaling","colLabels":["Character Level","Max Object Size","Save Modifier"],"rows":[["5th","2-ft cube","—"],["11th","3-ft cube","—"],["17th","4-ft cube","target rolls with disadvantage"]]}
+      ],
+      "damageInflict": ["fire"],
+      "damage": {"one": "1d6"},
+      "scalingLevelDice": {"5": "1d6", "11": "1d6", "17": "1d6"},
+      "save": {"type": "con"},
+      "source": "CMC_HB",
+      "page": 0
+    },
+    {
+      "name": "Bitter Truth",
+      "level": 0,
+      "school": "D",
+      "time": [{"number": 1, "unit": "action"}],
+      "range": {"type": "touch"},
+      "components": {"v": true, "s": true, "m": "a shard of bitter chocolate (consumed)"},
+      "duration": [{"type": "instant"}],
+      "entries": [
+        "You press the bitter chocolate to the lips of a willing, incapacitated, or restrained creature. The target must succeed on a Wisdom saving throw or be compelled to answer one yes-or-no question truthfully. Questions permitted increase to two at 11th level and three at 17th.",
+        "The spell does not prevent the creature from refusing to speak; it simply compels honesty if it does answer."
+      ],
+      "save": {"type": "wis"},
+      "source": "CMC_HB",
+      "page": 0
+    },
+    {
+      "name": "Chocolate Tribute",
+      "level": 0,
+      "school": "C",
+      "time": [{"number": 1, "unit": "minute"}],
+      "range": {"type": "point", "distance": {"type": "feet", "amount": 10}},
+      "components": {"v": true, "s": true, "m": "a single cocoa bean (consumed)"},
+      "duration": [{"type": "instant"}],
+      "entries": [
+        "You conjure a hand-sized statuette of stylised chocolate that lasts 24 hours (or until eaten). Whoever consumes the sweet gains {@scaledice 1 1dtemp} temporary hit point(s).",
+        "The statuette is worth 1 sp in fine-food markets. Both the monetary value and the temporary hit points double at 5th, 11th, and 17th level."
+      ],
+      "source": "CMC_HB",
+      "page": 0
+    },
+    {
+      "name": "Whisk of Warming",
+      "level": 0,
+      "school": "V",
+      "time": [{"number": 1, "unit": "action"}],
+      "range": {"type": "self"},
+      "components": {"v": true, "s": true, "m": "a toy whisk"},
+      "duration": [{"type": "timed", "duration": {"type": "minute", "amount": 1}, "concentration": true}],
+      "entries": [
+        "You stir the air, creating a 5-foot aura of comforting heat. Creatures in the aura have advantage on Constitution saving throws against cold weather or environmental cold.",
+        "At 11th level, creatures in the aura gain <b>resistance to cold damage</b>. At 17th level, creatures ignore the effects of natural extreme-cold environments while within the aura."
+      ],
+      "source": "CMC_HB",
+      "page": 0
+    },
+    {
+      "name": "Choco Splash",
+      "level": 0,
+      "school": "V",
+      "time": [{"number": 1, "unit": "action"}],
+      "range": {"type": "point", "distance": {"type": "feet", "amount": 60}},
+      "components": {"v": true, "s": true},
+      "duration": [{"type": "instant"}],
+      "entries": [
+        "Make a ranged spell attack against one creature: {@damage 1d6} bludgeoning damage. Until the start of your next turn, the next attack roll made against that target has <b>advantage</b>.",
+        {"type": "table","caption": "Damage Scaling","colLabels": ["Character Level","Damage"],"rows":[["Base","1d6"],["5th","2d6"],["11th","3d6"],["17th","4d6"]]}
+      ],
+      "damageInflict": ["bludgeoning"],
+      "damage": {"one": "1d6"},
+      "scalingLevelDice": {"5": "2d6", "11": "3d6", "17": "4d6"},
+      "source": "CMC_HB",
+      "page": 0
+    },
+    {
+      "name": "Sweet Aroma",
+      "level": 0,
+      "school": "E",
+      "time": [{"number": 1, "unit": "action"}],
+      "range": {"type": "cone", "distance": {"type": "feet", "amount": 15}},
+      "components": {"v": true, "s": true},
+      "duration": [{"type": "instant"}],
+      "entries": [
+        "Warm brownie scent billows in a 15-foot cone. Creatures in the area must succeed on a Wisdom saving throw or be <b>charmed</b>, unable to take reactions, and have their speed reduced by 10 feet until the end of your next turn.",
+        "The cone’s length increases to 20 feet at 5th level, 25 feet at 11th level, and 30 feet at 17th level."
+      ],
+      "save": {"type": "wis"},
+      "source": "CMC_HB",
+      "page": 0
+    },
+    {
+      "name": "Milky Shield",
+      "level": 0,
+      "school": "A",
+      "time": [{"number": 1, "unit": "reaction", "condition": "when a creature targets you with an attack"}],
+      "range": {"type": "self"},
+      "components": {"v": true, "s": true},
+      "duration": [{"type": "timed", "duration": {"type": "round", "amount": 1}}],
+      "entries": [
+        "A spiral of chocolate milk deflects danger. You gain a +{@scaledice 1 1|+|1} bonus to AC until the start of your next turn (+2 at 5th, +3 at 11th, +4 at 17th).",
+        "If the triggering attack still hits, the attacker must succeed on a Dexterity saving throw or have its speed reduced by 10 feet until the end of its next turn."
+      ],
+      "save": {"type": "dex"},
+      "source": "CMC_HB",
+      "page": 0
+    },
+    {
+      "name": "Chocolate Missile",
+      "level": 0,
+      "school": "V",
+      "time": [{"number": 1, "unit": "action"}],
+      "range": {"type": "point", "distance": {"type": "feet", "amount": 90}},
+      "components": {"v": true, "s": true},
+      "duration": [{"type": "instant"}],
+      "entries": [
+        "You hurl a solid chocolate dart. Make a ranged spell attack: {@damage 1d4} force damage, and the target’s movement speed is reduced by 5 feet until the start of your next turn.",
+        "You create additional darts at higher levels—two at 5th, three at 11th, and four at 17th level, each requiring a separate attack roll."
+      ],
+      "damageInflict": ["force"],
+      "damage": {"one": "1d4"},
+      "scalingLevelDice": {"5": "1d4", "11": "1d4", "17": "1d4"},
+      "source": "CMC_HB",
+      "page": 0
+    }
+  ]
+}
