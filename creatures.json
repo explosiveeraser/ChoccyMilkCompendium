@@ -15,13 +15,10 @@
     {
       "name": "Dairy Sprite Familiar",
       "source": "CMC_HB",
-      "page": 0,
-
-      "size": "T",
-      "type": "construct",
+      "size": ["Tiny"],
+      "type": { "type": "construct", "tags": ["dairy"] },
       "alignment": ["N"],
-
-      "ac": 13,
+      "ac": [ { "ac": 13, "from": ["natural armor"] } ],
       "hp": { "average": 14, "formula": "4d4 + 4" },
       "speed": { "walk": 10, "fly": 40, "hover": true },
 
@@ -33,14 +30,13 @@
       "cha": 8,
 
       "skill": { "stealth": "+5" },
-
-      "damageResistances": ["bludgeoning", "piercing"],
       "damageVulnerabilities": ["fire"],
+      "damageResistances": ["bludgeoning", "piercing"],
       "conditionImmunities": ["prone"],
 
       "senses": { "darkvision": 60, "passive": 10 },
       "languages": ["understands the languages of its summoner but can’t speak"],
-      "cr": 0,
+      "cr": "0",
 
       "trait": [
         {
