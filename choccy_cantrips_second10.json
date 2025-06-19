@@ -37,13 +37,25 @@
       "name": "Sweeten",
       "level": 0,
       "school": "T",
-      "time": [{"number": 1, "unit": "action"}],
-      "range": {"type": "touch"},
-      "components": {"v": true, "s": true},
-      "duration": [{"type": "instant"}],
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "touch" },
+      "components": { "v": true, "s": true },
+      "duration": [{ "type": "instant" }],
       "entries": [
-        "You transform up to 1 lb. of bland food or drink into a delectable chocolate treat. Anyone who consumes at least one bite gains {@scaledice 1 1dtemp} temporary hit point(s).",
-        "The temp-HP granted increases at higher levels (2/3/4 at 5th/11th/17th). At 17th level, the spell also neutralises non-magical poison in the target food or drink."
+        "You turn up to 1 pound of bland food or water into a delectable chocolate treat.",
+        {
+          "type": "table",
+          "caption": "Temporary Hit Points by Caster Level",
+          "colLabels": ["Level", "Temp HP"],
+          "rows": [
+            ["1st–4th", "1"],
+            ["5th–10th", "2"],
+            ["11th–16th", "3"],
+            ["17th+", "4"]
+          ]
+        },
+        "A creature that eats at least one bite of the treated food within 24 hours gains the listed temporary hit points. A creature can benefit from Sweeten only once per long rest.",
+        "At 17th level, this spell also neutralises any non-magical poison present in the targeted food or drink."
       ],
       "source": "CMC_HB",
       "page": 0
