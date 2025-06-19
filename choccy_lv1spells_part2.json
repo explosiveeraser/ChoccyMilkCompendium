@@ -1,0 +1,164 @@
+{
+  "_meta": {
+    "sources": [
+      {
+        "json": "CMC_HB",
+        "abbreviation": "CMC_HB",
+        "full": "Choccy-Milk Compendium Homebrew",
+        "authors": ["ACA"],
+        "url": ""
+      }
+    ],
+    "dateAdded": 1737052800,
+    "dateLastModified": 1737052800
+  },
+
+  "spell": [
+    {
+      "name": "Nourishing Aura",
+      "level": 1,
+      "school": "V",
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "self" },
+      "components": { "v": true, "s": true },
+      "duration": [
+        { "type": "timed", "duration": { "type": "minute", "amount": 1 }, "concentration": true }
+      ],
+      "entries": [
+        "Comforting cocoa steam billows from you in a 10-foot radius.",
+        "At the start of each creature’s turn, you may choose one creature in the aura (including yourself) to regain {@damage 1d4} hit points. A creature can benefit only once per round.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "When you cast this spell using a slot of 2nd level or higher, the healing increases by {@dice 1d4} for each slot level above 1st."
+          ]
+        }
+      ],
+      "damageInflict": ["healing"],
+      "heal": { "one": "1d4" },
+      "source": "CMC_HB",
+      "page": 0
+    },
+
+    {
+      "name": "Milk Barrier",
+      "level": 1,
+      "school": "A",
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "point", "distance": { "type": "feet", "amount": 60 } },
+      "components": { "v": true, "s": true },
+      "duration": [
+        { "type": "timed", "duration": { "type": "minute", "amount": 10 }, "concentration": true }
+      ],
+      "entries": [
+        "You conjure a wavering wall of opaque milk up to 15 feet long, 10 feet high, and 1 foot thick. The wall provides <b>half cover</b> (three-quarters cover against ranged weapon attacks made through it).",
+        "The barrier blocks vision but not movement; however, a creature that passes through the wall for the first time on a turn must succeed on a Dexterity saving throw or have its speed reduced by 10 feet until the end of the turn.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "When you cast this spell using a slot of 2nd level or higher, the wall’s length increases by 5 feet for each slot level above 1st."
+          ]
+        }
+      ],
+      "save": { "type": "dex" },
+      "source": "CMC_HB",
+      "page": 0
+    },
+
+    {
+      "name": "Sweet Aid",
+      "level": 1,
+      "school": "C",
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "point", "distance": { "type": "feet", "amount": 30 } },
+      "components": { "v": true, "s": true, "m": "a sugary lozenge (consumed)" },
+      "duration": [{ "type": "instant" }],
+      "entries": [
+        "A target creature regains {@damage 1d8 + @mod} hit points and gains {@damage 1d4} temporary hit points.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "The healing increases by {@dice 1d8}, and the temporary hit points increase by {@dice 1d4}, for each slot level above 1st."
+          ]
+        }
+      ],
+      "damageInflict": ["healing"],
+      "heal": { "one": "1d8" },
+      "source": "CMC_HB",
+      "page": 0
+    },
+
+    {
+      "name": "Cocoa Lash",
+      "level": 1,
+      "school": "V",
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "point", "distance": { "type": "feet", "amount": 30 } },
+      "components": { "v": true, "s": true },
+      "duration": [{ "type": "instant" }],
+      "entries": [
+        "You whip out a ribbon of dense cocoa at one creature. The target must make a Dexterity saving throw.",
+        "* **Failure:** The creature takes {@damage 3d4} bludgeoning damage and is pulled 5 feet toward you.",
+        "* **Success:** The creature takes half damage and isn’t pulled."
+      ],
+      "damageInflict": ["bludgeoning"],
+      "damage": { "one": "3d4" },
+      "save": { "type": "dex" },
+      "source": "CMC_HB",
+      "page": 0
+    },
+
+    {
+      "name": "Dairy Ward",
+      "level": 1,
+      "school": "A",
+      "time": [{ "number": 1, "unit": "bonus action" }],
+      "range": { "type": "touch" },
+      "components": { "v": true, "s": true },
+      "duration": [
+        { "type": "timed", "duration": { "type": "minute", "amount": 1 }, "concentration": true }
+      ],
+      "entries": [
+        "A soothing film of fermented cream coats the target. It gains a +1 bonus to Armor Class and <b>advantage</b> on saving throws against poison for the spell’s duration.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "When you cast this spell using a slot of 2nd level or higher, the AC bonus increases by 1 for every two slot levels above 1st (to a maximum of +3)."
+          ]
+        }
+      ],
+      "source": "CMC_HB",
+      "page": 0
+    },
+
+    {
+      "name": "Caramel Snare",
+      "level": 1,
+      "school": "C",
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "point", "distance": { "type": "feet", "amount": 30 } },
+      "components": { "v": true, "s": true },
+      "duration": [
+        { "type": "timed", "duration": { "type": "minute", "amount": 1 }, "concentration": true }
+      ],
+      "entries": [
+        "You conjure a pool of sticky caramel in a 5-foot radius centered on a point you can see. The ground is <b>difficult terrain</b>.",
+        "When a creature enters the area for the first time on a turn or starts its turn there, it must succeed on a Dexterity saving throw or be <b>restrained</b> for the spell’s duration. A restrained creature can use its action to make a Strength check against your spell save DC, ending the effect on itself on a success.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "When you cast this spell using a slot of 2nd level or higher, the radius increases by 5 feet for each slot level above 1st."
+          ]
+        }
+      ],
+      "save": { "type": "dex" },
+      "source": "CMC_HB",
+      "page": 0
+    }
+  ]
+}
