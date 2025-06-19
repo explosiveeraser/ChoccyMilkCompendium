@@ -10,53 +10,5 @@
     ]
   },
 
-  "monster": [
-    {
-      "name": "Dairy Sprite Familiar",
-      "source": "CMC_HB",
-      "page": 0,
-
-      "size": ["T"],
-      "type": { "type": "construct", "tags": ["dairy"] },
-      "alignment": ["N"],
-
-      "ac": [ { "ac": 13, "from": ["natural armor"] } ],
-      "hp": { "average": 14, "formula": "4d4 + 4" },
-
-      "speed": { "walk": "10 ft.", "fly": "40 ft.", "hover": true },
-
-      "str": 4,
-      "dex": 14,
-      "con": 12,
-      "int": 6,
-      "wis": 10,
-      "cha": 8,
-
-      "cr": "0",
-
-      "trait": [
-        {
-          "name": "Airy Cream",
-          "entries": [
-            "The sprite automatically succeeds on saving throws to avoid being knocked prone."
-          ]
-        },
-        {
-          "name": "Familiar Bond",
-          "entries": [
-            "The sprite can serve another creature as a familiar, obeying its commands and sharing its senses, as described in the {@spell find familiar} spell."
-          ]
-        }
-      ],
-
-      "action": [
-        {
-          "name": "Creamy Prod",
-          "entries": [
-            "{@atk mw} {@hit +4} to hit, reach 5 ft., one target. {@h damage} {@damage 4 (1d4 + 2)} force."
-          ]
-        }
-      ]
-    }
-  ]
+  
 }
