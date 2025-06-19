@@ -1,0 +1,150 @@
+{
+  "_meta": {
+    "sources": [
+      {
+        "json": "CMC_HB",
+        "abbreviation": "CMC_HB",
+        "full": "Choccy-Milk Compendium Homebrew",
+        "authors": ["ACA"],
+        "url": ""
+      }
+    ],
+    "dateAdded": 1737052800,
+    "dateLastModified": 1737052800
+  },
+
+  "spell": [
+    {
+      "name": "Cocoa Cloud",
+      "level": 2,
+      "school": "V",
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "point", "distance": { "type": "feet", "amount": 30 } },
+      "components": { "v": true, "s": true },
+      "duration": [
+        { "type": "timed", "duration": { "type": "minute", "amount": 1 }, "concentration": true }
+      ],
+      "entries": [
+        "A gentle cocoa-scented mist envelops one creature of your choice within range.",
+        "* At the start of each of its turns, the target gains {@damage 1d4} temporary hit points, up to a maximum pool of <b>5 × your proficiency bonus</b> temp-HP from this spell.",
+        "* The creature can use an <b>action</b> to take a hearty sip, ending the spell on itself and regaining {@damage 1d8} hit points.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "When you cast this spell using a slot of 3rd level or higher, the maximum temp-HP pool increases by 5 × your proficiency bonus for each slot level above 2nd."
+          ]
+        }
+      ],
+      "source": "CMC_HB",
+      "page": 0
+    },
+
+    {
+      "name": "Dairy Defense",
+      "level": 2,
+      "school": "A",
+      "time": [
+        { "number": 1, "unit": "reaction", "condition": "when a spell targets you" }
+      ],
+      "range": { "type": "self" },
+      "components": { "v": true, "s": true },
+      "duration": [
+        { "type": "timed", "duration": { "type": "round", "amount": 1 }, "concentration": true }
+      ],
+      "entries": [
+        "Foamy cream whirls around you, negating the spell that triggered this reaction as if by <i>counterspell</i>. For the rest of the round, a 10-foot splash surrounds you.",
+        "When a hostile creature enters that splash for the first time on a turn or starts its turn there, it must make a Dexterity saving throw; on a failure, it has <i>disadvantage</i> on attack rolls until the start of its next turn.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "When you cast this spell using a slot of 3rd level or higher, you may protect <b>one additional creature</b> within 30 feet from the triggering spell for each slot level above 2nd."
+          ]
+        }
+      ],
+      "save": { "type": "dex" },
+      "source": "CMC_HB",
+      "page": 0
+    },
+
+    {
+      "name": "Whipped Cream Wall",
+      "level": 2,
+      "school": "C",
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "point", "distance": { "type": "feet", "amount": 60 } },
+      "components": { "v": true, "s": true },
+      "duration": [
+        { "type": "timed", "duration": { "type": "minute", "amount": 10 }, "concentration": true }
+      ],
+      "entries": [
+        "You create a frothy white wall up to 20 feet long, 10 feet high, and 1 foot thick. The wall lasts for the duration and grants <b>three-quarters cover</b> to creatures behind it.",
+        "A creature that crosses the wall must succeed on a Strength saving throw or be <b>restrained</b> until the end of its next turn. The wall has 15 hit points, is vulnerable to fire, and is immune to poison and psychic damage.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "When you cast this spell using a slot of 3rd level or higher, the wall’s length increases by 10 feet for each slot level above 2nd."
+          ]
+        }
+      ],
+      "save": { "type": "str" },
+      "source": "CMC_HB",
+      "page": 0
+    },
+
+    {
+      "name": "Caramel Quagmire",
+      "level": 2,
+      "school": "T",
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "point", "distance": { "type": "feet", "amount": 60 } },
+      "components": { "v": true, "s": true },
+      "duration": [
+        { "type": "timed", "duration": { "type": "minute", "amount": 1 }, "concentration": true }
+      ],
+      "entries": [
+        "You liquefy the ground in a 10-foot-radius circle into sticky caramel. The area is <b>difficult terrain</b>.",
+        "A creature that enters the area or starts its turn there must succeed on a Strength saving throw or be <b>restrained</b> by the goo. A restrained creature can use an action to make a Strength (Athletics) or Dexterity (Acrobatics) check against your spell save DC, freeing itself on a success.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "When you cast this spell using a slot of 3rd level or higher, the radius increases by 5 feet for each slot level above 2nd."
+          ]
+        }
+      ],
+      "save": { "type": "str" },
+      "source": "CMC_HB",
+      "page": 0
+    },
+
+    {
+      "name": "Cocoa Spray",
+      "level": 2,
+      "school": "V",
+      "time": [{ "number": 1, "unit": "action" }],
+      "range": { "type": "self" },
+      "components": { "v": true, "s": true },
+      "duration": [{ "type": "instant" }],
+      "entries": [
+        "A 20-foot cone of pressurised cocoa erupts from your cup (or your porter’s space). Creatures in the area must make a Dexterity saving throw.",
+        "* <b>Failure:</b> The creature takes {@damage 3d8} bludgeoning damage and is <b>blinded</b> until the end of its next turn.",
+        "* <b>Success:</b> The creature takes half damage and is not blinded.",
+        {
+          "type": "section",
+          "name": "At Higher Levels",
+          "entries": [
+            "When you cast this spell using a slot of 3rd level or higher, the damage increases by {@dice 1d8} for each slot level above 2nd."
+          ]
+        }
+      ],
+      "damageInflict": ["bludgeoning"],
+      "damage": { "one": "3d8" },
+      "save": { "type": "dex" },
+      "source": "CMC_HB",
+      "page": 0
+    }
+  ]
+}
